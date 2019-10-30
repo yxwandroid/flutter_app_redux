@@ -63,9 +63,7 @@ class AVReduxListScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: (){
-                    List<AVList> avList= new List();
-                    avList.add(AVList("wilson",Icons.android));
-                    store.dispatch(AddAVListAction(new AVListState(avList)));
+                    store.dispatch(AddAVListAction(AVList("wilson",Icons.android)));
                   },
                 ),
                 new RaisedButton(

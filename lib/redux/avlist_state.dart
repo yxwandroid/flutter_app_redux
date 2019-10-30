@@ -32,7 +32,7 @@ final listReducer = combineReducers<AVListState>([
 ]);
 
 AVListState addItem(AVListState avLists, AddAVListAction action) {
-  avLists.data.add(action.avLists.data[0]);
+  avLists.data.add(action.avList);
   return avLists;
 }
 
@@ -46,9 +46,8 @@ AVListState initAVList(AVListState avLists, action) {
 }
 
 class AddAVListAction {
-  final AVListState avLists;
-
-  AddAVListAction(this.avLists);
+  final AVList avList;
+  AddAVListAction(this.avList);
 }
 
 class RemoveAVListAction {}
