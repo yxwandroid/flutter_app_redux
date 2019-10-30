@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'redux/states/count_state.dart';
+import 'redux/count_state.dart';
 
 class UnderScreen extends StatefulWidget {
   @override
