@@ -15,6 +15,7 @@ class AVReduxListScreen extends StatelessWidget {
         ),
         body: new Column(
           children: <Widget>[
+            //监听方式1
 //            new StoreConnector<MainState, AVListState>(
 //              converter: (store) {
 //                return store.state.avListState;
@@ -41,6 +42,8 @@ class AVReduxListScreen extends StatelessWidget {
 //                );
 //              },
 //            ),
+
+          //监听方式2
             new StoreBuilder<MainState>(builder: (context, store) {
               List<AVList> avList = store.state.avListState.data;
               return new Container(

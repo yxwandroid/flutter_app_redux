@@ -1,17 +1,19 @@
-# flutter_app_redux
 
-A new Flutter application.
+redux 触发的流程   
+ 
+1,首先是UI层触发action  
+2, action 把消息传递到reducer  
+3,reducer 负者更新store   
+4,当stroe内容有更动的时候触发state的改变     
+5,通过StoreConnector 或则 StoreBuilder来监听更新然后做界面的更新
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter_app_redux
+redux编写程序的流程   
+
+首先是创建对应业务的model  
+接着是创建操作model的modelState类进行相应的model数据的业务操作 
+创建对应业务的action 和对应的业务方法  
+然后将action ,业务方法 和reducer进行关联 

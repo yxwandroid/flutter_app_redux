@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_redux/av_redux_list_screen.dart';
-import 'package:flutter_app_redux/count_state.dart';
 import 'package:flutter_app_redux/redux/index.dart';
 import 'package:flutter_app_redux/redux/main_state.dart';
 import 'package:flutter_app_redux/store/store_manager.dart';
-import 'package:flutter_app_redux/top_screen.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
@@ -33,6 +31,11 @@ import 'package:redux/redux.dart';
 //    );
 //  }
 //}
+
+
+
+
+
 
 void main() {
   runApp(new MyApp());
