@@ -87,6 +87,16 @@ class AVReduxListScreen extends StatelessWidget {
                   onPressed: () {
                     StoreManager.store.dispatch(new RemoveAVListAction());
                   },
+                ),
+                new RaisedButton(
+                  color: Colors.blue,
+                  child: new Text(
+                    '重置全部状态',
+                    style: new TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () {
+                    MainState.clearStore();
+                  },
                 )
               ],
             )
