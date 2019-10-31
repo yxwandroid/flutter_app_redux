@@ -6,7 +6,7 @@
 
 
 
-###redux 触发的流程  
+### redux 触发的流程  
 ![](https://github.com/yxwandroid/flutter_app_redux/blob/master/redux.jpg) 
  
     1,首先是UI层触发action  
@@ -19,7 +19,7 @@
 
 
 
-###redux编写程序的流程   
+### redux编写程序的流程   
 
     首先是创建对应业务的model  
     接着是创建操作model的modelState类进行相应的model数据的业务操作 
@@ -29,7 +29,7 @@
 
 
 
-###参考
+### 参考
 
 https://juejin.im/post/5ba26c086fb9a05ce57697da
 https://zhuanlan.zhihu.com/p/55587462
@@ -37,7 +37,7 @@ https://zhuanlan.zhihu.com/p/55587462
 
 
 
-###关注公众号获取更多内容
+### 关注公众号获取更多内容
 
 
 如有帮助到你请给个star吧 你的支持就是我的努力做好的动力!!! 
