@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_redux/redux/index.dart';
-import 'package:flutter_redux/flutter_redux.dart';
+import 'package:flutter_app_redux/store/store_manager.dart';
 
 class MainState {
   UserState userState;
@@ -8,9 +8,14 @@ class MainState {
 
   MainState({this.userState, this.avListState});
 
-  static clearStore(BuildContext context) {
-    StoreProvider.of<MainState>(context).dispatch(InitUserStateAction());
-    StoreProvider.of<MainState>(context).dispatch(InitAVListAction());
+  ///store状态的重置
+  static clearStore() {
+    if (StoreManager.store != null) {
+      StoreManager.store.dispatch(InitUserStateAction());
+      StoreManager.store.dispatch(InitAVListAction());
+    } else {
+      print("store 管理者未进行初始化");
+    }
   }
 }
 

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_redux/model/av_list.dart';
 import 'package:flutter_app_redux/redux/avlist_state.dart';
 import 'package:flutter_app_redux/redux/main_state.dart';
+import 'package:flutter_app_redux/store/store_manager.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:redux/redux.dart';
 
 class AVReduxListScreen extends StatelessWidget {
-  final Store<MainState> store;
-
-  AVReduxListScreen({Key key, this.store}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -18,32 +15,52 @@ class AVReduxListScreen extends StatelessWidget {
         ),
         body: new Column(
           children: <Widget>[
-            new StoreConnector<MainState, AVListState>(
-              converter: (store) {
-                return store.state.avListState;
-              },
-              builder: (BuildContext context, data) {
-                List<AVList> avList = data.data;
-
-                return new Container(
-                  height: 500.0,
-                  child: ListView.builder(
-                    itemCount: avList.length,
-                    itemBuilder: (BuildContext context, int position) {
-                      return new Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: new Row(
-                          children: <Widget>[
-                            new Text(avList[position].name),
-                            new Icon(avList[position].icon, color: Colors.blue)
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-                );
-              },
-            ),
+//            new StoreConnector<MainState, AVListState>(
+//              converter: (store) {
+//                return store.state.avListState;
+//              },
+//              builder: (BuildContext context, data) {
+//                List<AVList> avList = data.data;
+//
+//                return new Container(
+//                  height: 500.0,
+//                  child: ListView.builder(
+//                    itemCount: avList.length,
+//                    itemBuilder: (BuildContext context, int position) {
+//                      return new Padding(
+//                        padding: EdgeInsets.all(10.0),
+//                        child: new Row(
+//                          children: <Widget>[
+//                            new Text(avList[position].name),
+//                            new Icon(avList[position].icon, color: Colors.blue)
+//                          ],
+//                        ),
+//                      );
+//                    },
+//                  ),
+//                );
+//              },
+//            ),
+            new StoreBuilder<MainState>(builder: (context, store) {
+              List<AVList> avList = store.state.avListState.data;
+              return new Container(
+                height: 500.0,
+                child: ListView.builder(
+                  itemCount: avList.length,
+                  itemBuilder: (BuildContext context, int position) {
+                    return new Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: new Row(
+                        children: <Widget>[
+                          new Text(avList[position].name),
+                          new Icon(avList[position].icon, color: Colors.blue)
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              );
+            }),
             new Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -54,7 +71,7 @@ class AVReduxListScreen extends StatelessWidget {
                     style: new TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    store.dispatch(
+                    StoreManager.store.dispatch(
                         AddAVListAction(AVList("wilson", Icons.android)));
                   },
                 ),
@@ -65,7 +82,7 @@ class AVReduxListScreen extends StatelessWidget {
                     style: new TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    store.dispatch(new RemoveAVListAction());
+                    StoreManager.store.dispatch(new RemoveAVListAction());
                   },
                 )
               ],

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_redux/av_redux_list_screen.dart';
-import 'package:flutter_app_redux/redux/count_state.dart';
+import 'package:flutter_app_redux/count_state.dart';
 import 'package:flutter_app_redux/redux/index.dart';
 import 'package:flutter_app_redux/redux/main_state.dart';
+import 'package:flutter_app_redux/store/store_manager.dart';
 import 'package:flutter_app_redux/top_screen.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
@@ -43,17 +44,18 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   final store = new Store<MainState>(appReducer,
       initialState: MainState(
           userState: UserState.initStore(),
           avListState: AVListState.initStore()));
 
-
   @override
   void initState() {
     super.initState();
+    print("初始化应用的时候初始化store管理者");
+    StoreManager.setStore(store);
   }
+
   @override
   Widget build(BuildContext context) {
     return StoreProvider<MainState>(
@@ -63,10 +65,8 @@ class _MyAppState extends State<MyApp> {
         theme: new ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: AVReduxListScreen(store: store),
+        home: AVReduxListScreen(),
       ),
     );
   }
 }
-
-

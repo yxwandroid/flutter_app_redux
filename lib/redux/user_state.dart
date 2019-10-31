@@ -1,4 +1,4 @@
-import 'package:flutter_app_redux/redux/model/userinfo.dart';
+import 'package:flutter_app_redux/model/userinfo.dart';
 import 'package:redux/redux.dart';
 //State
 class UserState {

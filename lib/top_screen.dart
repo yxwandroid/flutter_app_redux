@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_redux/redux/count_state.dart';
+import 'package:flutter_app_redux/count_state.dart';
 import 'package:flutter_app_redux/under_screen.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
