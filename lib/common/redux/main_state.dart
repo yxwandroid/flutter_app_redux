@@ -1,5 +1,5 @@
-import 'package:flutter_app_redux/redux/index.dart';
-import 'package:flutter_app_redux/store/store_manager.dart';
+import 'package:flutter_app_redux/common/redux/index.dart';
+import 'package:flutter_app_redux/common/store/store_manager.dart';
 
 class MainState {
   UserState userState;
@@ -13,7 +13,7 @@ class MainState {
       StoreManager.store.dispatch(InitUserStateAction());
       StoreManager.store.dispatch(InitAVListAction());
     } else {
-      print("store 管理者未进行初始化");
+      print("common.store 管理者未进行初始化");
     }
   }
 }
