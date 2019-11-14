@@ -7,8 +7,10 @@
 
 
 ### redux 触发的流程  
-![](https://github.com/yxwandroid/flutter_app_redux/blob/master/redux.jpg) 
- 
+
+
+![](.README_images/f0837042.png)
+
     1,首先是UI层触发action  
     2,action 把消息传递到reducer  
     3,reducer 负者更新store   
@@ -44,12 +46,9 @@ https://zhuanlan.zhihu.com/p/55587462
 
 --------------关注公众号第一时间获取最新内容------------------------
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190926100941125.jpg)
 
+![](.README_images/d87e9fe7.png)
 
-
-
-![](.README_images/84434cc4.png)
 
 
 
