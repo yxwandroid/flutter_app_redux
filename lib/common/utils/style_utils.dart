@@ -631,6 +631,4 @@ class SMCommonStyle {
 
 class SMIcons {
   static const String ICON_BACK = 'static/img/common/icon_back.png';
-  static const String HOME_ENTER_2 = 'static/img/home/home_enter_2.png';
-
 }

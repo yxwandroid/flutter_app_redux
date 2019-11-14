@@ -51,10 +51,11 @@ class _DragDebugWidgetState extends State<DragDebugWidget> {
               NavigatorUtils.getInstance().getContext(), DebugPage.sName);
         },
         child: Container(
-          width: 80,
-          height: 80,
+//          width: 80,
+//          height: 80,
           alignment: Alignment.center,
-          child:Image.asset(SMIcons.HOME_ENTER_2, width: 60, height: 60,),
+          child:Center(child: Icon(Icons.offline_bolt,size: 60,)),
+//          child:Image.asset(SMIcons.HOME_ENTER_2, width: 60, height: 60,),
 //          child: FlareActor(
 //            "static/flrs/one_punch.flr",
 //            controller: DragDebugWidget.myController,
