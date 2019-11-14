@@ -9,7 +9,11 @@
 ### redux 触发的流程  
 
 
-![We-w70](.README_images/f0837042.png ) 
+<!--![We-w70](.README_images/f0837042.png ) -->
+
+<img src=".README_images/f0837042.png" width="400"  align=center />
+
+
 
     1,首先是UI层触发action  
     2,action 把消息传递到reducer  
@@ -49,3 +53,4 @@ https://zhuanlan.zhihu.com/p/55587462
 
 
 <img src=".README_images/d87e9fe7.png" width="200" hegiht="313" align=center />
+
