@@ -11,16 +11,17 @@ enum APIType {
 }
 
 Map<APIType, String> apiMap = {
-  APIType.STAGING: 'http://114.67.74.108:8082',
-  APIType.PRODUCTION: 'http://152.136.193.176:8001',
+  APIType.STAGING: 'http://49.234.5.92:8080',
+  APIType.PRODUCTION: 'http://49.234.5.92:8080',
 };
-
 class ApiAddress {
   static final String host = apiMap[Config.API_SETTING];
-  static final String api_Host = '$host/api';
+  static final String api_Host = '$host/nfc';
 
-  ///登录接口
-  static login() {
-    return '/feedback/submit';
+
+  //登录
+  static loginByPwd() {
+    return '/user/login';
   }
+
 }
