@@ -79,7 +79,6 @@
 				5B7FC24AEF61FEE215B5401F /* Pods-Runner.release.xcconfig */,
 				ABC73392B0608F476CF012BB /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -393,6 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s armv6";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Profile;
@@ -528,6 +528,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s armv6";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -555,6 +556,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s armv6";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
