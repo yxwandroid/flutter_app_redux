@@ -631,15 +631,6 @@ class SMCommonStyle {
 
 class SMIcons {
   static const String ICON_BACK = 'static/img/common/icon_back.png';
-  static const String COMMON_RIGHT = 'static/img/common/icon_right.png';
-  static const String PLACE_LOADING = 'static/img/common/place_loading.png';
-  static const String PLACE_NET_ERROR = 'static/img/common/place_net_error.png';
-  static const String PLACE_NO_MSG = 'static/img/common/place_no_msg.png';
-  static const String PLACE_NO_ORDER = 'static/img/common/place_no_order.png';
-  static const String PLACE_NODATA = 'static/img/common/place_nodata.png';
-  static const String ICON_DOWNLOAD = 'static/img/common/icon_download.png';
-  static const String ICON_SWITCH = 'static/img/home/home_tab_switch.png';
   static const String HOME_ENTER_2 = 'static/img/home/home_enter_2.png';
-  static const String HOME_ENTER_3 = 'static/img/home/home_enter_3.png';
 
 }

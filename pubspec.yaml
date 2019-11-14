@@ -58,12 +58,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - static/img/home/home_enter_1.png
      - static/img/home/home_enter_2.png
-     - static/img/home/home_enter_3.png
-     - static/img/home/home_enter_4.png
      - static/img/common/icon_back.png
-     - static/img/common/icon_right.png
   fonts:
      - family: Bebas
        fonts:
