@@ -40,6 +40,7 @@ class Code {
 
 
 
+  ///网络异常统一通知方法
   static errorHandleEunction(code, message, noTip) {
     EventBusHelper.fire(HttpErrorEvent(code, message, noTip));
 

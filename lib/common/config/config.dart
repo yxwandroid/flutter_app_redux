@@ -12,11 +12,6 @@ class Config {
   static const HTTP_TIMEOUT = 5000;
   // 分页数量
   static const PAGE_SIZE = 10;
-  // 微信appId
-  static const wechatAppId = 'wx6ec33639e77ca7a8';
-  static const aliAppId = '2019090767063089';
-  // 腾讯播放器appId
-  static const tencentAppId = 1259801863;
 
   /// //////////////////////////////////////常量////////////////////////////////////// ///
   static const TOKEN_KEY = "token";
@@ -42,8 +37,3 @@ class PackageType {
   static const ios = "ios";
 }
 
-class ThumbImgSize {
-  static const String avatar_100_100 = '?imageMogr2/thumbnail/100x100';
-  static const String thumb_200_200 = '?imageMogr2/thumbnail/200x200';
-  static const String thumb_400_400 = '?imageMogr2/thumbnail/400x400';
-}

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_redux/model/av_list.dart';
-import 'package:flutter_app_redux/redux/avlist_state.dart';
-import 'package:flutter_app_redux/redux/main_state.dart';
-import 'package:flutter_app_redux/store/store_manager.dart';
+import 'package:flutter_app_redux/common/model/av_list.dart';
+import 'package:flutter_app_redux/common/redux/avlist_state.dart';
+import 'package:flutter_app_redux/common/redux/main_state.dart';
+import 'package:flutter_app_redux/common/store/store_manager.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 class AVReduxListScreen extends StatelessWidget {
