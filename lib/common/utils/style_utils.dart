@@ -226,11 +226,10 @@ class SMTxtStyle {
   );
 
   static const color333dp14h11 = SMTextStyle(
-    color: SMColors.textColor333333,
-    fontSize: SMSize.dp14,
-    decoration: TextDecoration.none,
-    height: 1.5
-  );
+      color: SMColors.textColor333333,
+      fontSize: SMSize.dp14,
+      decoration: TextDecoration.none,
+      height: 1.5);
   static const color333dp21Bold = SMTextStyle(
     color: SMColors.textColor333333,
     fontSize: SMSize.dp21,
@@ -243,9 +242,9 @@ class SMTxtStyle {
   );
 
   static const color333dp14Bold = SMTextStyle(
-    color: SMColors.textColor333333,
-    fontSize: SMSize.dp14,
-    fontWeight: FontWeight.w500);
+      color: SMColors.textColor333333,
+      fontSize: SMSize.dp14,
+      fontWeight: FontWeight.w500);
 
   static const color333dp14h08Bold = SMTextStyle(
     color: SMColors.textColor333333,
@@ -266,11 +265,10 @@ class SMTxtStyle {
   );
 
   static const color333dp16h11Bold = SMTextStyle(
-    color: SMColors.textColor333333,
-    fontSize: SMSize.dp16,
-    fontWeight: FontWeight.bold,
-    height: 1.5
-  );
+      color: SMColors.textColor333333,
+      fontSize: SMSize.dp16,
+      fontWeight: FontWeight.bold,
+      height: 1.5);
 
   static const color333dp16h08Bold = SMTextStyle(
     color: SMColors.textColor333333,
@@ -284,10 +282,7 @@ class SMTxtStyle {
   );
 
   static const color666dp12h11 = SMTextStyle(
-    color: SMColors.textColor666666,
-    fontSize: SMSize.dp12,
-    height: 1.5
-  );
+      color: SMColors.textColor666666, fontSize: SMSize.dp12, height: 1.5);
   static const color666dp14 = SMTextStyle(
     color: SMColors.textColor666666,
     fontSize: SMSize.dp14,
@@ -594,7 +589,8 @@ class SMCommonStyle {
   static EdgeInsets paddingHori25 = EdgeInsets.symmetric(horizontal: 25.0);
   static EdgeInsets paddingHori15Top10 =
       EdgeInsets.only(left: 15.0, right: 15.0, top: 10);
-  static EdgeInsets paddingHori15Top15Bottom10 = EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 10);
+  static EdgeInsets paddingHori15Top15Bottom10 =
+      EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 10);
   static EdgeInsets paddingTop15Bottom10 = EdgeInsets.only(top: 15, bottom: 10);
   static EdgeInsets paddingTop10Bottom15 = EdgeInsets.only(top: 10, bottom: 15);
   static EdgeInsets paddingVert12 = EdgeInsets.symmetric(vertical: 12.0);
@@ -612,8 +608,10 @@ class SMCommonStyle {
   static EdgeInsets btnPadding =
       EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0);
   static Border border05White = Border.all(width: 0.5, color: SMColors.white);
-  static Border border051e1e1e = Border.all(width: 0.5, color: SMColors.colore1e1e1);
-  static Border border05979797 = Border.all(width: 0.5, color: SMColors.color979797);
+  static Border border051e1e1e =
+      Border.all(width: 0.5, color: SMColors.colore1e1e1);
+  static Border border05979797 =
+      Border.all(width: 0.5, color: SMColors.color979797);
   static Border borderBottom03Gray =
       Border(bottom: BorderSide(width: 0.3, color: SMColors.grayLineColor));
   static Border borderBottom05Colordadada =
@@ -641,93 +639,7 @@ class SMIcons {
   static const String PLACE_NODATA = 'static/img/common/place_nodata.png';
   static const String ICON_DOWNLOAD = 'static/img/common/icon_download.png';
   static const String ICON_SWITCH = 'static/img/home/home_tab_switch.png';
-  static const String HOME_ENTER_1 = 'static/img/home/home_enter_1.png';
   static const String HOME_ENTER_2 = 'static/img/home/home_enter_2.png';
   static const String HOME_ENTER_3 = 'static/img/home/home_enter_3.png';
-  static const String HOME_ENTER_4 = 'static/img/home/home_enter_4.png';
-  static const String HOME_ITEM_BG = 'static/img/home/home_tab_item_bg.png';
-  static const String PWD = 'static/img/login/pwd.png';
-  static const String QUESTION = 'static/img/login/question.png';
-  static const String CLEARX = 'static/img/login/clearX.png';
-  static const String CLOSEX = 'static/img/login/closeX.png';
-  static const String ASSESS_SOSO = 'static/img/mine/order_assess_soso.png';
-  static const String ASSESS_GOOD = 'static/img/mine/order_assess_good.png';
-  static const String ASSESS_BAD = 'static/img/mine/order_assess_bad.png';
-  static const String LOGISTICS_COPY = 'static/img/mine/order_logistics_copy.png';
-  static const String LOGISTICS_INACTIVE = 'static/img/mine/order_logistics_inactive.png';
-  static const String LOGISTICS_ACTIVE = 'static/img/mine/order_logistics_active.png';
-  static const String BALANCE_BG = 'static/img/mine/balance_bg.png';
-  static const String CHATONLINE = 'static/img/course/chatonline.png';
-  static const String SHARE = 'static/img/course/share.png';
-  static const String WECHAT = 'static/img/course/wechat.png';
-  static const String ONLINE = 'static/img/course/online.png';
-  static const String ARROW_DOWN = 'static/img/course/arrow_down.png';
-  static const String ARROW_UP = 'static/img/course/arrow_up.png';
-  static const String WECHATFRIEND = 'static/img/course/wechatfriend.png';
-  static const String WECHATPAY = 'static/img/course/wechatpay.png';
-  static const String ALIPAY = 'static/img/course/alipay.png';
-  static const String SELECT = 'static/img/common/select.png';
-  static const String UNSELECT = 'static/img/common/unselected.png';
-  static const String PAYSUCCESS = 'static/img/course/paysuccess.png';
-  static const String PAYFAILED = 'static/img/course/payfailed.png';
-  static const String ICON_OK = 'static/img/learn/icon_ok.png';
-  static const String ICON_PLAY = 'static/img/learn/icon_play.png';
-  static const String PLAYER_ROTATE = 'static/img/learn/player_rotate.png';
-  static const String SMALL_LOADING = 'static/img/learn/small_loading.gif';
-  static const String ANGLE = 'static/img/course/angle.png';
-  static const String ANGLE_LEFT = 'static/img/course/angle_left.png';
-  static const String ANGLE_RIGHT = 'static/img/course/angle_right.png';
-  static const String SEND = 'static/img/course/send.png';
-  static const String ICON_UNSELECT = 'static/img/learn/icon_unselect.png';
-  static const String ICON_PAUSE = 'static/img/learn/icon_download_pause.png';
-  static const String ICON_CONTINUE = 'static/img/learn/icon_download_continue.png';
-  static const String ICON_DOWN_SELECT = 'static/img/common/icon_down_select.png';
-  static const String ICON_MY_ADDRESS = 'static/img/mine/address_icon.png';
-  static const String ICON_MY_COURSE = 'static/img/mine/class_course_icon.png';
-  static const String ICON_MY_DOWNLOAD = 'static/img/mine/download_icon.png';
-  static const String ICON_MY_HELP = 'static/img/mine/help_icon.png';
-  static const String ICON_MY_NOTIFY = 'static/img/mine/notify_icon.png';
-  static const String ICON_MY_ORDER = 'static/img/mine/order_icon.png';
-  static const String ICON_MY_QUESTION = 'static/img/mine/question_icon.png';
-  static const String ICON_MY_SELECT = 'static/img/mine/select_icon.png';
-  static const String ICON_MY_UNSELECT = 'static/img/mine/unselect_icon.png';
-  static const String ICON_MY_SHARE = 'static/img/mine/share_gift_icon.png';
-  static const String ICON_MY_SETTING = 'static/img/mine/setting_icon.png';
-  static const String FULL_SCREEN_ON = 'static/img/learn/full_screen_on.png';
-  static const String VIDEO_LOADING = 'static/img/learn/video_loading.png';
-  static const String PLAYER_LOCK = 'static/img/learn/player_lock.png';
-  static const String PLAYER_PAUSE = 'static/img/learn/player_pause.png';
-  static const String PLAYER_PLAY = 'static/img/learn/player_play.png';
-  static const String PLAYER_PROGRESS_IMG = 'static/img/learn/player_progress_img.png';
-  static const String PLAYER_UNLOCK = 'static/img/learn/player_unlock.png';
-  static const String CLEAR_LIST_BG = 'static/img/learn/clear_list_bg.png';
-  static const String BOTTOM_LOGO = 'static/img/common/bottom_logo.png';
-  static const String ANSWER_GRID_ICON_1 = 'static/img/answer/grid_icon_1.png';
-  static const String ANSWER_GRID_ICON_2 = 'static/img/answer/grid_icon_2.png';
-  static const String ANSWER_GRID_ICON_3 = 'static/img/answer/grid_icon_3.png';
-  static const String ANSWER_GRID_ICON_4 = 'static/img/answer/grid_icon_4.png';
-  static const String ANSWER_GRID_ICON_5 = 'static/img/answer/grid_icon_5.png';
-  static const String ANSWER_GRID_ICON_6 = 'static/img/answer/grid_icon_6.png';
-  static const String ANSWER_GRID_ICON_7 = 'static/img/answer/grid_icon_7.png';
-  static const String ICON_COMMENT = 'static/img/answer/icon_comment.png';
-  static const String ICON_PREVIEW = 'static/img/answer/icon_preview.png';
-  static const String ICON_LICK = 'static/img/answer/icon_lick.png';
-  static const String ICON_UNLICK = 'static/img/answer/icon_unlick.png';
-  static const String ICON_ADD = 'static/img/answer/icon_add.png';
-  static const String ICON_EDIT = 'static/img/answer/icon_edit.png';
-  static const String ICON_DELETE = 'static/img/answer/icon_delete.png';
-  static const String ICON_CAMERA = 'static/img/answer/icon_camera.png';
-  static const String ADDRESS_EDIT = 'static/img/mine/edit.png';
-  static const String ADDRESS_DELETE = 'static/img/mine/delete.png';
-  static const String ADDRESS_ADD = 'static/img/mine/address_add.png';
-  static const String RIGHT_ARROW = 'static/img/mine/right_arrow.png';
-  static const String REDBTN_BG = 'static/img/common/red_btn_bg.png';
-  static const String DEFAULT_AVATAR = 'static/img/common/default_avatar.png';
-  static const String TEST_9 = 'static/img/common/test9.png';
-  static const String SPLASH_ADS = 'static/img/common/splash_ads.png';
-  static const String LOGO = 'static/img/common/logo.png';
-  static const String MESSAGE_COURSE = 'static/img/message/message_course.png';
-  static const String MESSAGE_LOGISTICS = 'static/img/message/message_logistics.png';
-  static const String MESSAGE_ANSWER = 'static/img/message/message_answer.png';
-  static const String PLACE_NO_ADDRESS = 'static/img/common/place_no_address.png';
+
 }

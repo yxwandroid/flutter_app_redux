@@ -6,6 +6,16 @@ import 'package:flutter_app_redux/common/config/config.dart';
 import 'package:flutter_app_redux/common/utils/common_util.dart';
 import 'package:flutter_app_redux/common/utils/log_util.dart';
 import 'package:flutter_app_redux/navigator/status_bar_util.dart';
+import 'package:flutter_app_redux/page/av_redux_list_page.dart';
+import 'package:flutter_app_redux/page/common/debug/debug_page.dart';
+import 'package:flutter_app_redux/page/common/debug/net_log_detail_page.dart';
+import 'package:flutter_app_redux/page/common/debug/net_log_page.dart';
+import 'package:flutter_app_redux/page/common/debug/package_info_page.dart';
+import 'package:flutter_app_redux/page/common/debug/print_log_page.dart';
+import 'package:flutter_app_redux/page/common/demo/cache_demo.dart';
+import 'package:flutter_app_redux/page/common/demo/demo_page.dart';
+import 'package:flutter_app_redux/page/common/demo/image_preview_demo.dart';
+import 'package:flutter_app_redux/page/common/demo/share_login_pay_demo.dart';
 import 'package:flutter_app_redux/page/login_page.dart';
 import 'package:flutter_app_redux/page/splash_page.dart';
 
@@ -16,6 +26,16 @@ class NavigatorUtils extends NavigatorObserver {
   static Map<String, WidgetBuilder> configRoutes = {
     SplashPage.sName: (context) => SplashPage(),
     LoginPage.sName: (context) => LoginPage(),
+    AVReduxListPage.sName: (context) => AVReduxListPage(),
+    DebugPage.sName: (context) => DebugPage(),
+    DemoPage.sName: (context) => DemoPage(),
+    NetLogDetailPage.sName: (context) => NetLogDetailPage(),
+    NetLogPage.sName: (context) => NetLogPage(),
+    PackageInfoPage.sName: (context) => PackageInfoPage(),
+    PrintLogPage.sName: (context) => PrintLogPage(),
+    CacheDemo.sName: (context) => CacheDemo(),
+    ImagePreviewDemo.sName: (context) => ImagePreviewDemo(),
+    ShareLoginPayDemo.sName: (context) => ShareLoginPayDemo(),
 
   };
   static NavigatorUtils navigatorUtils;

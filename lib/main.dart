@@ -4,7 +4,7 @@ import 'package:flutter_app_redux/common/redux/main_state.dart';
 import 'package:flutter_app_redux/common/redux/user_state.dart';
 import 'package:flutter_app_redux/common/store/store_manager.dart';
 import 'package:flutter_app_redux/navigator/navigator_utils.dart';
-import 'package:flutter_app_redux/page/av_redux_list_screen.dart';
+import 'package:flutter_app_redux/page/av_redux_list_page.dart';
 import 'package:flutter_app_redux/page/login_page.dart';
 import 'package:flutter_app_redux/page/splash_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

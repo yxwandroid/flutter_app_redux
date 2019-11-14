@@ -5,7 +5,8 @@ import 'package:flutter_app_redux/common/redux/main_state.dart';
 import 'package:flutter_app_redux/common/store/store_manager.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-class AVReduxListScreen extends StatelessWidget {
+class AVReduxListPage extends StatelessWidget {
+  static final String sName  =  "AVReduxListPage";
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
