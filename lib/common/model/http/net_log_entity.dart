@@ -1,6 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
 
-@JsonSerializable()
 class NetLogEntityList {
   List<NetLogEntity> netLogEntityList;
 
@@ -22,7 +20,6 @@ class NetLogEntityList {
   NetLogEntityList.empty();
 }
 
-@JsonSerializable()
 class NetLogEntity {
   String url;
   DateTime requestTime;

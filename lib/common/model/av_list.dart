@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_redux/common/model/entity_factory.dart';
 
 ///1 创建model
-class AVList {
+class AVList extends BaseEntity {
   final String name;
   final IconData icon;
 

@@ -1,10 +1,8 @@
 library userinfomodel;
 
 import 'package:flutter_app_redux/common/model/entity_factory.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 
-@JsonSerializable()
 class UserinfoModel extends BaseEntity{
 
   String msg;
