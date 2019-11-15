@@ -13,6 +13,8 @@ class UserDao {
       "password": pwd,
       "username": phone,
     };
+
+
     ResponseResult<UserinfoModel> response = await HttpManager.netFetch<UserinfoModel>(
         ApiAddress.loginByPwd(), requestParams, NetMethod.POST);
     LogUtil.i(sName, 'loginByPwd response: $response');

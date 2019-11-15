@@ -1,4 +1,12 @@
-class UserinfoModel {
+library userinfomodel;
+
+import 'package:flutter_app_redux/common/model/entity_factory.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+
+@JsonSerializable()
+class UserinfoModel extends BaseEntity{
+
   String msg;
   int status;
   DataBean data;
@@ -8,6 +16,8 @@ class UserinfoModel {
   UserinfoModel.fromJson(Map<String, dynamic> json) {    
     this.msg = json['msg'];
     this.status = json['status'];
+    this.code = status;
+    this.message = msg;
     this.data = json['data'] != null ? DataBean.fromJson(json['data']) : null;
   }
 

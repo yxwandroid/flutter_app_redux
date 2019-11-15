@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter_app_redux/common/config/config.dart';
@@ -29,7 +28,7 @@ class HttpManager {
   static String token;
 
   static Future<ResponseResult> netFetch<Entity>(url, params, String method,
-      {noTip = false, bool isList = false, queryParameters, selfHost = false, isWWWForm = false, needDelay = false}) async {
+      {noTip = false, queryParameters, isList = false,  isWWWForm = false, needDelay = false}) async {
 
     ResponseResult responseResult = isList ? new ResponseResult<List<Entity>>() : new ResponseResult<Entity>();
     // 没有网络
@@ -53,24 +52,21 @@ class HttpManager {
       _httpLogRequest(netLogEntity, method, url, option, params, queryParameters);
 
       if (needDelay) {
-        response = (await Future.wait([dio.request(selfHost ? url : ApiAddress.api_Host + url, data: params, options: option, queryParameters: queryParameters), Future.delayed(Duration(milliseconds: Config.JUMP_PAGE_DELAY))]))[0];
+        response = (await Future.wait([dio.request( ApiAddress.api_Host + url, data: params, options: option, queryParameters: queryParameters), Future.delayed(Duration(milliseconds: Config.JUMP_PAGE_DELAY))]))[0];
       } else {
-        response = await dio.request(selfHost ? url : ApiAddress.api_Host + url, data: params, options: option, queryParameters: queryParameters);
+        response = await dio.request( ApiAddress.api_Host + url, data: params, options: option, queryParameters: queryParameters);
       }
 
 
       _httpLogResponse(netLogEntity, response);
       if (_isHttpSuccess(response.statusCode)) {
-        // 如果服务器返回的是String，则转成Map
-        if (response.data.runtimeType == String) response.data = json.decode(response.data) as Map<dynamic, dynamic>;
-        if (selfHost || response.data['code'] == 1) {
-          // 只解析服务器返回的data,如果selfHost则全部解析
-          var needParseData = selfHost ? response.data : response.data['data'];
+        if (response.data['status'] == 0) {
+          var needParseData = response.data;
           /// 业务正常
           if (isList) {
             // 数组
             responseResult.fillData(response.statusCode, response.data, EntityCreatorFactory.createEntityList<Entity>(needParseData), Code.CODE_ALL_SUCCESS, null);
-          } else  {
+          } else{
             Entity entity;
             if (Entity == dynamic) {
               // 不解析
@@ -80,6 +76,7 @@ class HttpManager {
             }
             responseResult.fillData(response.statusCode, response.data, entity, Code.CODE_ALL_SUCCESS, null);
           }
+
         } else {
           /// 业务异常
           if (response.data['code'] == 0) {
@@ -88,7 +85,7 @@ class HttpManager {
           } else {
             responseResult.fillData(response.statusCode, response.data, null, response.data["code"], response.data["message"]);
           }
-          if (!noTip) ToastUtil.showRed(responseResult.message);
+          if (!noTip) ToastUtil.showRed("22");
         }
       } else {
         responseResult.statusCode = response.statusCode;

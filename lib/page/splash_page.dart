@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_redux/common/config/config.dart';
+import 'package:flutter_app_redux/common/dao/user_dao.dart';
+import 'package:flutter_app_redux/common/model/http/response_result.dart';
 import 'package:flutter_app_redux/common/redux/main_state.dart';
 import 'package:flutter_app_redux/common/utils/common_util.dart';
 import 'package:flutter_app_redux/common/utils/log_util.dart';
@@ -55,8 +57,19 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       appBar:AppBar(title: Text("引导界面"),),
       body: Container(
-        child: Text("wilson"),
+        child: Center(child: FlatButton(
+          onPressed: (){
+
+            login();
+          },
+            child: Text("wilson"))),
       ),
     );
+  }
+
+
+
+  login() async {
+    ResponseResult<dynamic> response = await UserDao.loginByPwd("wilson","123456");
   }
 }

@@ -1,8 +1,8 @@
-import 'package:flutter_app_redux/common/model/userinfo.dart';
+import 'package:flutter_app_redux/common/model/userinfo_model.dart';
 import 'package:redux/redux.dart';
 //State
 class UserState {
-  UserInfo userInfo;
+  UserinfoModel userInfo;
 
   UserState(this.userInfo);
 
@@ -33,7 +33,7 @@ UserState _updateUserLoad(UserState userState, action) {
 
 //action
 class UpdateUserAction {
-  final UserInfo userInfo;
+  final UserinfoModel userInfo;
   UpdateUserAction(this.userInfo);
 }
 
