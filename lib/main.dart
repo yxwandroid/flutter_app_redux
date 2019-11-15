@@ -10,6 +10,8 @@ import 'package:flutter_app_redux/common/redux/index.dart';
 import 'package:flutter_app_redux/common/redux/main_state.dart';
 import 'package:flutter_app_redux/common/redux/user_state.dart';
 import 'package:flutter_app_redux/common/store/store_manager.dart';
+import 'package:flutter_app_redux/common/utils/log_util.dart';
+import 'package:flutter_app_redux/common/utils/screen_util.dart';
 import 'package:flutter_app_redux/common/utils/toast_util.dart';
 import 'package:flutter_app_redux/navigator/navigator_utils.dart';
 import 'package:flutter_app_redux/page/splash_page.dart';
@@ -46,8 +48,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    print("初始化应用的时候初始化store管理者");
-    StoreManager.setStore(store);
 
     stream =
         EventBusHelper.getEventTypeStream<HttpErrorEvent>().listen((event) {
@@ -55,6 +55,9 @@ class _MyAppState extends State<MyApp> {
     });
     EntityCreatorFactory.registerAllCreator();
   }
+
+
+
 
   @override
   void dispose() {

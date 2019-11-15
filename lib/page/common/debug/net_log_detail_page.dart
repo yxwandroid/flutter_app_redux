@@ -7,7 +7,8 @@ import 'package:flutter_app_redux/widget/sm_titlebar_widget.dart';
 
 class NetLogDetailPage extends StatefulWidget {
   static final String sName = "net_log_detail";
-  NetLogEntity netLogEntity;
+
+  final NetLogEntity netLogEntity;
 
   NetLogDetailPage({this.netLogEntity});
 

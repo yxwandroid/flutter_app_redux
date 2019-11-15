@@ -3,7 +3,6 @@ import 'package:flare_flutter/flare.dart';
 import 'package:flare_flutter/flare_controls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_redux/common/utils/screen_util.dart';
-import 'package:flutter_app_redux/common/utils/style_utils.dart';
 import 'package:flutter_app_redux/navigator/navigator_utils.dart';
 import 'package:flare_dart/math/vec2d.dart';
 import 'package:flare_dart/math/mat2d.dart';

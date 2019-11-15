@@ -3,7 +3,7 @@ import 'package:flutter_app_redux/common/config/config.dart';
 import 'package:flutter_app_redux/common/dao/user_dao.dart';
 import 'package:flutter_app_redux/common/model/http/response_result.dart';
 import 'package:flutter_app_redux/common/redux/main_state.dart';
-import 'package:flutter_app_redux/common/utils/common_util.dart';
+import 'package:flutter_app_redux/common/store/store_manager.dart';
 import 'package:flutter_app_redux/common/utils/log_util.dart';
 import 'package:flutter_app_redux/common/utils/screen_util.dart';
 import 'package:flutter_app_redux/navigator/navigator_utils.dart';
@@ -31,17 +31,17 @@ class _SplashPageState extends State<SplashPage> {
 
   }
 
-
   @override
   void didChangeDependencies() async {
     super.didChangeDependencies();
-    LogUtil.i(SplashPage.sName,"------didChangeDependencies");
-    // 初始化store
-    CommonUtils.setStore(StoreProvider.of<MainState>(context));
+    LogUtil.i("SplashPage","------didChangeDependencies");
+    //("初始化应用的时候初始化store管理者");
+    StoreManager.setStore(StoreProvider.of<MainState>(context));
     NavigatorUtils.getInstance().setContext(context);
     // 初始化屏幕信息
     ScreenUtil.getInstance().init(context);
   }
+
 
 
   _showDebugEnter() {

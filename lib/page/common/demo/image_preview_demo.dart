@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_redux/common/utils/screen_util.dart';
 import 'package:flutter_app_redux/common/utils/style_utils.dart';
-import 'package:flutter_app_redux/navigator/navigator_utils.dart';
 import 'package:flutter_app_redux/widget/sm_button_widget.dart';
 import 'package:flutter_app_redux/widget/sm_textstyle.dart';
 import 'package:flutter_app_redux/widget/sm_titlebar_widget.dart';

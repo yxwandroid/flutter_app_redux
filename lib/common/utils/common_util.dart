@@ -1,23 +1,14 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter_app_redux/common/redux/main_state.dart';
-import 'package:redux/redux.dart';
 import 'package:convert/convert.dart';
 import 'package:crypto/crypto.dart';
+import 'package:flutter_app_redux/common/store/store_manager.dart';
+
 class CommonUtils {
-  // getStore
-  static Store<MainState> _store;
-
-  static Store<MainState> get store => _store;
-
-  static setStore(Store<MainState> s) {
-    _store = s;
-  }
 
   static bool isLogin() {
-    return _store?.state.userState.userInfo != null;
+    return StoreManager.store.state.userState.userInfo != null;
   }
-
 
   // 防抖函数: eg:输入框连续输入，用户停止操作300ms才执行访问接口
   static const deFaultDurationTime = 300;

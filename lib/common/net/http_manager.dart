@@ -52,9 +52,9 @@ class HttpManager {
       _httpLogRequest(netLogEntity, method, url, option, params, queryParameters);
 
       if (needDelay) {
-        response = (await Future.wait([dio.request( ApiAddress.api_Host + url, data: params, options: option, queryParameters: queryParameters), Future.delayed(Duration(milliseconds: Config.JUMP_PAGE_DELAY))]))[0];
+        response = (await Future.wait([dio.request( ApiAddress.apiHost + url, data: params, options: option, queryParameters: queryParameters), Future.delayed(Duration(milliseconds: Config.JUMP_PAGE_DELAY))]))[0];
       } else {
-        response = await dio.request( ApiAddress.api_Host + url, data: params, options: option, queryParameters: queryParameters);
+        response = await dio.request( ApiAddress.apiHost + url, data: params, options: option, queryParameters: queryParameters);
       }
 
 
@@ -121,7 +121,7 @@ class HttpManager {
 
   static _httpLogRequest(NetLogEntity netLogEntity, method, url, option, params, queryParameters) {
     LogUtil.i(sName, '请求url: ' + url);
-    netLogEntity.url = ApiAddress.api_Host + url;
+    netLogEntity.url = ApiAddress.apiHost + url;
     netLogEntity.method = method;
     netLogEntity.requestTime = DateTime.now();
     if(token != null) {
@@ -183,7 +183,7 @@ class HttpManager {
       FormData formData = new FormData.fromMap({
         "file": MultipartFile.fromBytes(result, filename: "upload.png"),
       });
-      Response response = await dio.post(ApiAddress.api_Host + url, data: formData, options: option, onSendProgress: onSendProgress);
+      Response response = await dio.post(ApiAddress.apiHost + url, data: formData, options: option, onSendProgress: onSendProgress);
       LogUtil.i(sName, 'uploadFile response: $response');
       if (response.data['code'] == 1) {
         return ResponseResult.from(response.statusCode, data: response.data, code: Code.CODE_ALL_SUCCESS, message: response.data["message"]);

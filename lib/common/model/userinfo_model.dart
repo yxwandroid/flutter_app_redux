@@ -1,23 +1,23 @@
 library userinfomodel;
 
 import 'package:flutter_app_redux/common/model/entity_factory.dart';
+import 'package:flutter_app_redux/common/utils/log_util.dart';
 
 
-class UserinfoModel extends BaseEntity{
+class UserInfoModel extends BaseEntity{
 
   String msg;
   int status;
   DataBean data;
 
-  UserinfoModel({this.msg, this.status, this.data});
+  UserInfoModel({this.msg, this.status, this.data});
 
-  UserinfoModel.fromJson(Map<String, dynamic> json) {    
+  UserInfoModel.fromJson(Map<String, dynamic> json) {
     this.msg = json['msg'];
     this.status = json['status'];
-    this.code = status;
-    this.message = msg;
     this.data = json['data'] != null ? DataBean.fromJson(json['data']) : null;
   }
+
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
@@ -27,6 +27,11 @@ class UserinfoModel extends BaseEntity{
       data['data'] = this.data.toJson();
     }
     return data;
+  }
+
+  @override
+  void onParseComplete() {
+    LogUtil.i("onParseComplete",UserInfoModel);
   }
 
 }

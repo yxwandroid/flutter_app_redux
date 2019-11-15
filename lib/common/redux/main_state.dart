@@ -20,7 +20,7 @@ class MainState {
 
 MainState appReducer(MainState store, dynamic action) {
   return MainState(
-    userState: UserReducer(store.userState, action),
+    userState: userReducer(store.userState, action),
     avListState: listReducer(store.avListState, action),
   );
 }

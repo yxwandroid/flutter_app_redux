@@ -7,23 +7,21 @@ import 'package:flutter_app_redux/common/utils/log_util.dart';
 class UserDao {
   static final String sName = "UserDao";
 
-  //账号密码登录{
+  ///账号密码登录
   static loginByPwd(String phone, String pwd) async {
     Map requestParams = {
       "password": pwd,
       "username": phone,
     };
 
-
-    ResponseResult<UserinfoModel> response = await HttpManager.netFetch<UserinfoModel>(
+    ResponseResult<UserInfoModel> response = await HttpManager.netFetch<UserInfoModel>(
         ApiAddress.loginByPwd(), requestParams, NetMethod.POST);
     LogUtil.i(sName, 'loginByPwd response: $response');
 
     if (response.isSuccess) {
-      UserinfoModel userInfo = response.data;
+      UserInfoModel userInfo = response.data;
       HttpManager.clearToken();
     }
-
     return response;
   }
 }

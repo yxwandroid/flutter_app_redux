@@ -2,7 +2,7 @@ import 'package:flutter_app_redux/common/model/userinfo_model.dart';
 import 'package:redux/redux.dart';
 //State
 class UserState {
-  UserinfoModel userInfo;
+  UserInfoModel userInfo;
 
   UserState(this.userInfo);
 
@@ -13,7 +13,7 @@ class UserState {
 
 
 //reducer
-final UserReducer = combineReducers<UserState>([
+final userReducer = combineReducers<UserState>([
   TypedReducer<UserState, InitUserStateAction>(_init),
   TypedReducer<UserState, UpdateUserAction>(_updateUserLoad),
 ]);
@@ -33,7 +33,7 @@ UserState _updateUserLoad(UserState userState, action) {
 
 //action
 class UpdateUserAction {
-  final UserinfoModel userInfo;
+  final UserInfoModel userInfo;
   UpdateUserAction(this.userInfo);
 }
 

@@ -605,8 +605,7 @@ class SMCommonStyle {
   static EdgeInsets padding15 = EdgeInsets.all(15.0);
   static EdgeInsets padding15Left = EdgeInsets.only(left: 15.0);
   static EdgeInsets padding20 = EdgeInsets.all(20.0);
-  static EdgeInsets btnPadding =
-      EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0);
+  static EdgeInsets btnPadding = EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0);
   static Border border05White = Border.all(width: 0.5, color: SMColors.white);
   static Border border051e1e1e =
       Border.all(width: 0.5, color: SMColors.colore1e1e1);

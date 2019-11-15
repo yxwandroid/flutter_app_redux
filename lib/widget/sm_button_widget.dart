@@ -13,11 +13,11 @@ enum SMButtonType {
   RedBorder, // 边框按钮
 
 }
-
+// ignore: must_be_immutable
 class SMButtonWidget extends StatelessWidget {
-  double width;
+   double width;
 
-  double height;
+   double height;
 
   final String text;
 

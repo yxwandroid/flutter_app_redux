@@ -16,7 +16,7 @@ Map<APIType, String> apiMap = {
 };
 class ApiAddress {
   static final String host = apiMap[Config.API_SETTING];
-  static final String api_Host = '$host/nfc';
+  static final String apiHost = '$host/nfc';
 
 
   //登录
