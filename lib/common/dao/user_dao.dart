@@ -16,7 +16,7 @@ class UserDao {
 
     ResponseResult<UserInfoModel> response = await HttpManager.netFetch<UserInfoModel>(
         ApiAddress.loginByPwd(), requestParams, NetMethod.POST);
-    LogUtil.i(sName, 'loginByPwd response: $response');
+    LogUtil.i(sName, 'loginByPwd response: $response',ifSaveSp: true);
 
     if (response.isSuccess) {
       UserInfoModel userInfo = response.data;
