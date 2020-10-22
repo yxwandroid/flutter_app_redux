@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_redux/common/utils/screen_util.dart';
 import 'package:flutter_app_redux/common/utils/style_utils.dart';
-import 'package:flutter_app_redux/widget/sm_button_widget.dart';
 import 'package:flutter_app_redux/widget/sm_textstyle.dart';
 import 'package:flutter_app_redux/widget/sm_titlebar_widget.dart';
 
@@ -26,17 +25,12 @@ class _ImagePreviewDemoState extends State<ImagePreviewDemo> {
 
           Text('登录', style: SMTextStyle(fontFamily:  'Black', fontSize: 24,),),
           Text('Test', style: SMTextStyle(fontFamily:  'Bebas', fontSize: 24,),),
-          SMButtonWidget(text: '下一步', buttonType: SMButtonType.RedBg,),
           SizedBox(height: 10,),
-          SMButtonWidget(text: '下一步2', buttonType: SMButtonType.GrayBg,),
           Text('xixixix:' + ScreenUtil.getInstance().screenWidth.toString()),
           Text(ScreenUtil.getInstance().getWidth(40.0).toString()),
-          Text('ahahahah'),
           Text(SMColors.btnColord8d8d8.toString()),
           Text('hehehehe'),
-          Text(SMTxtStyle.color999dp14.toString()),
           SizedBox(height: 10,),
-          SMButtonWidget(text: '下一步', buttonType: SMButtonType.RedBorder,),
           SizedBox(height: 10,),
 
         ],
